@@ -1,0 +1,99 @@
+body {
+  font-family: 'roboto mono', monospace;
+  min-height: 400px;
+
+  background-color: #131313;
+  background-size: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+.section {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  max-width: 100%;
+}
+
+div .grid {
+  align-items: center;
+}
+
+.page-title {
+  color: #00ad9a;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #f1f1f1;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+h3.show {
+  color: green;
+  visibility: visible;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h4.show {
+  color: red;
+  visibility: visible;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+h3 {
+  visibility: hidden;
+}
+h4 {
+  visibility: hidden;
+}
+
+input {
+  color: #131313;
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0px;
+}
+
+.calcular {
+  background-color: #00ad9a;
+  height: 40px;
+  width: 100px;
+}
+
+form {
+  align-items: initial;
+  position: relative;
+}
