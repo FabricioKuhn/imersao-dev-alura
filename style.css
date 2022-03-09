@@ -32,12 +32,9 @@ body {
   background-image: linear-gradient(to bottom right, #00ad9a, #170c30);
   -webkit-font-smoothing: antialiased;
 }
-#grad {
-  background-image: linear-gradient(to bottom right, red, yellow);
-}
 
-div {
-  margin: 0 auto;
+#mentalist {
+  margin-top: 4rem;
 }
 
 .title {
@@ -55,6 +52,7 @@ div {
 .container {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
+  text-align: center;
 }
 .section {
   padding: calc(5rem + var(--header-height)) 0;
@@ -248,6 +246,14 @@ h4.show {
   margin-top: -2rem;
 }
 
+#resultado {
+  font-size: var(--subtitle-font-size);
+  font-family: (--title-font);
+  font-weight: 600;
+  text-align: center;
+  color: #f1f1f1;
+}
+
 h3 {
   visibility: hidden;
 }
@@ -272,11 +278,13 @@ textarea {
 
 button {
   background-color: #00ad9a;
-  height: 40px;
-  width: 100px;
+  height: 50px;
+  width: 150px;
   border-radius: 8px;
   border: 0;
   margin-top: 1rem;
+  color: #f1f1f1;
+  font: 600 var(--title-font);
 }
 
 button:hover {
@@ -310,6 +318,14 @@ form {
   #conversor {
     grid-auto-flow: column;
     margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+    align-items: flex-start;
+  }
+
+  #mentalist {
+    grid-auto-flow: column;
+    margin: 6rem auto 0 auto;
     justify-content: space-between;
     position: relative;
     align-items: flex-start;

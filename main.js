@@ -25,8 +25,24 @@ function Converter() {
   var valorElemento = parseFloat(document.getElementById('valor').value)
   var elementoValorConvertido = document.getElementById('valorConvertido')
   var conversao = valorElemento * 5.32
-  var valorConvertido = 'O resultado em Dolar é R$ ' + conversao
+  var valorConvertido = 'O resultado em Reais é R$ ' + conversao
   elementoValorConvertido.innerHTML = valorConvertido
+}
+
+/**Game adivinhação*/
+var numeroSecreto = parseInt(Math.random() * 11)
+function Chutar() {
+  var chute = parseInt(document.getElementById('valor-chute').value)
+  var elementoResultado = document.getElementById('resultado')
+
+  if (chute == numeroSecreto) {
+    elementoResultado.innerHTML = 'Você acertou!'
+  } else if (chute > 10 || chute < 0) {
+    elementoResultado.innerHTML = 'Você deve inserir um número de 0 a 10'
+  } else {
+    elementoResultado.innerHTML =
+      'Você errou, o número secreto era ' + numeroSecreto
+  }
 }
 
 //*abrir e fechar menu, funcionalidades do nav
