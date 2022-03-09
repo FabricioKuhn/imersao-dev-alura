@@ -1,8 +1,7 @@
+//*Calcular a média
 const aprovado = document.querySelector('h3')
 const reprovado = document.querySelector('h4')
 const media = 5
-
-const button = document.querySelector('#calcular')
 
 function calc(e) {
   var n1 = parseFloat(document.getElementById('notaDoPrimeiroBimestre').value)
@@ -19,8 +18,53 @@ function calc(e) {
     aprovado.classList.remove('show')
     reprovado.classList.add('show')
   }
-
-  alert('Sua média é ' + calculo)
 }
 
-function mediaAnual() {}
+//*Conversor de moedas
+function Converter() {
+  var valorElemento = parseFloat(document.getElementById('valor').value)
+  var elementoValorConvertido = document.getElementById('valorConvertido')
+  var conversao = valorElemento * 5.32
+  var valorConvertido = 'O resultado em Dolar é R$ ' + conversao
+  elementoValorConvertido.innerHTML = valorConvertido
+}
+
+//*abrir e fechar menu, funcionalidades do nav
+const links = document.querySelectorAll('nav ul li a')
+for (const link of links) {
+  link.addEventListener('click', function () {
+    nav.classList.remove('show')
+  })
+}
+
+const nav = document.querySelector('#header nav')
+const toggle = document.querySelectorAll('nav .toggle')
+for (const element of toggle) {
+  element.addEventListener('click', function () {
+    nav.classList.toggle('show')
+  })
+}
+
+const sections = document.querySelectorAll('main section[id]')
+function activateMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute('id')
+
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.add('active')
+    } else {
+      document
+        .querySelector('nav ul li a[href*=' + sectionId + ']')
+        .classList.remove('active')
+    }
+  }
+}

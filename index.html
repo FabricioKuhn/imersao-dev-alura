@@ -5,38 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de médias</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="" href="" />
+ <!-- Ícones -->
+ <link rel="stylesheet" href="assets/style.css" />
+
+   <!-- FONTES -->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+     rel="stylesheet"
+   />
+
+
   </head>
   <body>
-    <div class="container">
-      <h1 class="page-title">Calculadora de média</h1>
-      <p class="page-subtitle">
+    <header id="header">
+      <nav class="container">
+        <!-- Cabeçalho do site -->
+        <a class="logo" href=#><img src="assets/images/codeforce_1-01.png" alt=></a>
+        <!-- Títulos -->
+        <!-- MENU -->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#calculate">Calculadora de Médias</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <!-- /MENU -->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
+      </nav>
+    </header>
+<main class="section">
+  <!-- Calculadora de médias-->
+  <section class="container grid" id="calculate">
+    <div class="container calculate">
+      <h1 class="title">Calculadora de média</h1>
+      <p class="subtitle">
         Descubra qual a sua média de notas de todas as provas!
       </p>
-      <h2 class="page-subtitle">
+      <h2 class="subtitle">
         Preencha o formulário com as suas notas e descupra a sua média
       </h2>
-
     </div>
-    <section class="section grid"><form action="">
+    <!--Formulário para calcular médias-->
+    <div class="calculate" ><form action="">
       <input type="number" id="notaDoPrimeiroBimestre" required="required" placeholder="Primeiro Bimestre" /><br>
       <input type="number" id="notaDoSegundoBimestre" required="required" placeholder="Segundo Bimestre"/><br>
       <input type="number" id="notaDoTerceiroBimestre" required="required" placeholder="Terceiro Bimestre"/><br>
       <input type="number" id="notaDoQuartoBimestre" required="required" placeholder="Quarto Bimestre"/><br>
-      <input type="button" id="calcular" class="calcular" onclick="calc(this)"; value="Calcular" />
+      <button type="submit" id="calcular" class="calcular" onclick="calc(this)"; value="Calcular"> Calcular</button>
    
     <h3 class="aprovado">Parabéns, você foi aprovado!</h3>
     <h4 class="reprovado">Que pena, você não foi aprovado!</h4>
+    </div>
   </section>
-    
-    <a href="https://alura.com.br/" target="_blank">
-      <img
-        src="https://www.alura.com.br/assets/img/home/alura-logo.svg"
-        class="alura-logo"
-        alt="Logo da Alura"
-      />
-    </a>
+<!--Conversor de moeda-->
+  <section class="container grid" id="conversor">      
+    <div class="container calculate">
+      <h1 class="title">Conversor de moeda</h1>
+      <p class="subtitle">
+        Converta Reais em Dolares de maneira super simples!
+      </p>
+      <h2 class="subtitle">
+        Preencha o formulário com as suas notas e descupra a sua média
+      </h2>
+    </div>
+    <!--Formulário para converter moeda-->
+    <div class="calculate" ><form action="">
+      <input type="number" id="valor" placeholder="R$"/><br>
 
+      <button type="submit" class="converter" onclick="Converter()">Converter</button>
+   
+    <h2 id="valorConvertido"></h2>
+    </div>
+
+  </section>
+
+</main>
     <script src="main.js"></script>
 
 
