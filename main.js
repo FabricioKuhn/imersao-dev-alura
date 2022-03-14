@@ -45,6 +45,25 @@ function Chutar() {
   }
 }
 
+/**Codeflix */
+var listaFilmes = [
+  'https://i.ytimg.com/vi/uaSYEUugnzE/movieposter_en.jpg',
+
+  'https://upload.wikimedia.org/wikipedia/pt/thumb/b/bf/Insidious.jpg/230px-Insidious.jpg',
+
+  'https://i.pinimg.com/originals/17/aa/71/17aa718c1ab15b482505b8431cf596fc.jpg',
+
+  'https://images-na.ssl-images-amazon.com/images/I/81aA7hEEykL.jpg',
+
+  'https://img.elo7.com.br/product/zoom/2657A30/big-poster-harry-potter-e-a-pedra-filosofal-lo02-90x60-cm-harry-potter.jpg',
+
+  'https://img.elo7.com.br/product/zoom/2692949/big-poster-o-senhor-dos-aneis-o-retorno-do-rei-lo09-90x60-cm-o-senhor-dos-aneis-o-retorno-do-rei.jpg'
+]
+
+for (var indice = 0; indice < listaFilmes.length; indice++) {
+  document.write('<img src=' + listaFilmes[indice] + '>')
+}
+
 //*abrir e fechar menu, funcionalidades do nav
 const links = document.querySelectorAll('nav ul li a')
 for (const link of links) {

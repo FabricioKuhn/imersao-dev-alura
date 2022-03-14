@@ -30,10 +30,13 @@ body {
   font-family: 'roboto mono', monospace;
 
   background-image: linear-gradient(to bottom right, #00ad9a, #170c30);
-  -webkit-font-smoothing: antialiased;
 }
 
 #mentalist {
+  margin-top: 4rem;
+}
+
+#codeflix {
   margin-top: 4rem;
 }
 
@@ -48,6 +51,7 @@ body {
   color: #f1f1f1;
   font: var(--body-font);
   font-size: var(--subtitle-font-size);
+  text-align: center;
 }
 .container {
   margin-right: 1.5rem;
@@ -92,11 +96,16 @@ body {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 
-img {
+#logo {
   font: 700 1.31rem var(--title-font);
   color: var(--title-color);
   max-width: 200px;
   max-height: 100px;
+}
+
+img {
+  max-height: 250px;
+  margin: 0 10px;
 }
 
 .logo span {
