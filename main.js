@@ -18,6 +18,11 @@ function calc(e) {
     aprovado.classList.remove('show')
     reprovado.classList.add('show')
   }
+
+  document.getElementById('notaDoPrimeiroBimestre').value = ''
+  document.getElementById('notaDoSegundoBimestre').value = ''
+  document.getElementById('notaDoTerceiroBimestre').value = ''
+  document.getElementById('notaDoQuartoBimestre').value = ''
 }
 
 //*Conversor de moedas
@@ -27,6 +32,8 @@ function Converter() {
   var conversao = valorElemento * 5.32
   var valorConvertido = 'O resultado em Reais é R$ ' + conversao
   elementoValorConvertido.innerHTML = valorConvertido
+
+  document.getElementById('valor').value = ''
 }
 
 /**Game adivinhação*/
@@ -43,26 +50,31 @@ function Chutar() {
     elementoResultado.innerHTML =
       'Você errou, o número secreto era ' + numeroSecreto
   }
+
+  document.getElementById('valor-chute').value = ''
 }
 
 /**Codeflix */
-var films = document.getElementById('films')
-var listaFilmes = [
-  'https://i.ytimg.com/vi/uaSYEUugnzE/movieposter_en.jpg',
 
-  'https://upload.wikimedia.org/wikipedia/pt/thumb/b/bf/Insidious.jpg/230px-Insidious.jpg',
+//*Adicionar filme
 
-  'https://i.pinimg.com/originals/17/aa/71/17aa718c1ab15b482505b8431cf596fc.jpg',
+function adicionarFilme() {
+  var filmeFavorito = document.getElementById('filme').value
 
-  'https://images-na.ssl-images-amazon.com/images/I/81aA7hEEykL.jpg',
+  if (filmeFavorito.endsWith('.jpg')) {
+    listarFilmesNaTela(filmeFavorito)
+  } else {
+    console.error('Endereço de filme inválido')
+  }
 
-  'https://img.elo7.com.br/product/zoom/2657A30/big-poster-harry-potter-e-a-pedra-filosofal-lo02-90x60-cm-harry-potter.jpg',
+  document.getElementById('filme').value = ''
+}
 
-  'https://img.elo7.com.br/product/zoom/2692949/big-poster-o-senhor-dos-aneis-o-retorno-do-rei-lo09-90x60-cm-o-senhor-dos-aneis-o-retorno-do-rei.jpg'
-]
-
-for (var indice = 0; indice < listaFilmes.length; indice++) {
-  films.innerHTML = '<img src=' + listaFilmes[indice] + '>'
+function listarFilmesNaTela(filmeFavorito) {
+  var elementoFilmeFavorito = '<img src=' + filmeFavorito + '>'
+  var elementoListaFilmes = document.getElementById('listaFilmes')
+  elementoListaFilmes.innerHTML =
+    elementoListaFilmes.innerHTML + elementoFilmeFavorito
 }
 
 //*abrir e fechar menu, funcionalidades do nav
