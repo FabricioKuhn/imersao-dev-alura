@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --header-height: 4.5rem;
   /* colors */
@@ -26,61 +32,118 @@ ul {
   list-style: none;
 }
 
-body {
-  font-family: 'roboto mono', monospace;
-
-  background-image: linear-gradient(to bottom right, #00ad9a, #170c30);
-}
-
-#mentalist {
-  margin-top: 4rem;
-}
-
-#codeflix {
-  margin-top: 4rem;
+html {
+  scroll-behavior: smooth;
 }
 
 .title {
-  font: bold var(--title-font);
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(--title-color);
-  font-size: var(--title-font-size);
   -webkit-font-smoothing: auto;
 }
 
-.subtitle {
-  color: #f1f1f1;
-  font: var(--body-font);
-  font-size: var(--subtitle-font-size);
-  text-align: center;
+body {
+  font: 400 1rem var(--body-font);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  background-image: linear-gradient(to bottom right, #00ad9a, #170c30);
 }
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
+  );
+}
+
+.divider-2 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 57%, 1)
+  );
+}
+
+/*======= LAYOUT ============================================*/
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
 .container {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
+}
+
+.form {
   text-align: center;
 }
 .section {
   padding: calc(5rem + var(--header-height)) 0;
 }
 
-.calculate {
+.section .title {
+  font: bold var(--title-font);
+  color: var(--title-color);
+  font-size: var(--title-font-size);
+  -webkit-font-smoothing: auto;
+  margin-bottom: 1rem;
   text-align: center;
 }
-.grid {
-  display: grid;
-  gap: 2rem;
-  padding: 0 auto;
+
+.section .subtitle {
+  color: #f1f1f1;
+  font: var(--body-font);
+  font-size: var(--subtitle-font-size);
+  text-align: center;
 }
 
 .section header {
-  margin-bottom: 0rem;
+  margin-bottom: 4rem;
 }
 
 .section header strong {
   color: var(--base-color);
 }
 
-#header {
+input {
+  color: #131313;
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0px;
+}
+
+button {
+  background-color: #00ad9a;
+  height: 50px;
+  width: 150px;
+  border-radius: 8px;
+  border: 0;
+  margin-top: 1rem;
+  color: #f1f1f1;
+  font: 600 var(--title-font);
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #019b89;
+}
+
+header {
   border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
   display: flex;
   width: 100%;
   position: fixed;
@@ -88,7 +151,6 @@ body {
   left: 0;
   z-index: 100;
   background-color: #232323;
-
   width: 100%;
 }
 
@@ -115,6 +177,8 @@ img {
 .logo-alt span {
   color: var(--body-color);
 }
+
+/*==== NAVIGATION =========*/
 
 nav {
   height: var(--header-height);
@@ -223,86 +287,56 @@ div .toggle {
   text-align: right;
 }
 
-/* resultado calculadora */
+/* Calculate */
 
-#calculate {
-  gap: 0px;
-  margin: 0;
-  padding: 0;
-}
-
-h3.show {
+#aprovado.show {
   color: green;
   visibility: visible;
   font-size: var(--subtitle-font-size);
+  font-family: (--title-font);
   font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
 }
 
-#valorConvertido {
-  color: green;
-
-  font-size: var(--subtitle-font-size);
-  font-weight: 600;
-}
-
-h4.show {
+#reprovado.show {
   color: red;
   visibility: visible;
   font-size: var(--subtitle-font-size);
   font-family: (--title-font);
   font-weight: 600;
   text-align: center;
-  margin-top: -2rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0;
 }
 
-#resultado {
+#aprovado {
+  visibility: hidden;
+}
+#reprovado {
+  visibility: hidden;
+}
+
+/* Conversor */
+
+#valorConvertido {
+  color: green;
+  visibility: visible;
   font-size: var(--subtitle-font-size);
   font-family: (--title-font);
   font-weight: 600;
-  text-align: center;
-  color: #f1f1f1;
+  margin-top: 2rem;
 }
 
-h3 {
-  visibility: hidden;
-}
-h4 {
-  visibility: hidden;
-}
+/* Mentalista */
 
-input {
-  color: #131313;
-  font-size: 0.8rem;
-  font-weight: 200;
-  margin-top: 20px;
-}
-
-input,
-textarea {
-  width: 200px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 0px;
-}
-
-button {
-  background-color: #00ad9a;
-  height: 50px;
-  width: 150px;
-  border-radius: 8px;
-  border: 0;
-  margin-top: 1rem;
-  color: #f1f1f1;
-  font: 600 var(--title-font);
-}
-
-button:hover {
-  background-color: #019b89;
-}
-
-form {
-  align-items: initial;
-  position: relative;
+#resultado {
+  color: #e4e4e4;
+  visibility: visible;
+  font-size: var(--subtitle-font-size);
+  font-family: (--title-font);
+  font-weight: 600;
+  margin-top: 2rem;
 }
 
 /* Responsivo */
@@ -360,10 +394,6 @@ form {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .section {
-    padding: 10rem 0;
   }
 
   .button {

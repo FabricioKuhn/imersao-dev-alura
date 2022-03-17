@@ -1,6 +1,6 @@
 //*Calcular a média
-const aprovado = document.querySelector('h3')
-const reprovado = document.querySelector('h4')
+const aprovado = document.querySelector('h4')
+const reprovado = document.querySelector('h5')
 const media = 5
 
 function calc(e) {
@@ -46,6 +46,7 @@ function Chutar() {
 }
 
 /**Codeflix */
+var films = document.getElementById('films')
 var listaFilmes = [
   'https://i.ytimg.com/vi/uaSYEUugnzE/movieposter_en.jpg',
 
@@ -61,7 +62,7 @@ var listaFilmes = [
 ]
 
 for (var indice = 0; indice < listaFilmes.length; indice++) {
-  document.write('<img src=' + listaFilmes[indice] + '>')
+  films.innerHTML = '<img src=' + listaFilmes[indice] + '>'
 }
 
 //*abrir e fechar menu, funcionalidades do nav

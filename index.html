@@ -19,12 +19,13 @@
 
   </head>
   <body>
+  
     <header id="header">
       <nav class="container">
         <!-- Cabeçalho do site -->
         <a class="logo" href=#><img id="logo" src="assets/images/codeforce_1-01.png" alt=></a>
         <!-- Títulos -->
-        <!-- MENU -->
+         <!-- MENU -->
         <div class="menu">
           <ul class="grid">
             <li><a class="title" href="#calculate">Calculadora de Médias</a></li>
@@ -33,89 +34,114 @@
             <li><a class="title" href="#codeflix">Codeflix</a></li>
           </ul>
         </div>
-        <!-- /MENU -->
+         <!-- MENU -->
         <div class="toggle icon-menu"></div>
         <div class="toggle icon-close"></div>
       </nav>
     </header>
-<main class="section">
+
+<main>
   <!-- Calculadora de médias-->
-  <section class="container grid" id="calculate">
-    <div class="container calculate">
-      <h1 class="title">Calculadora de média</h1>
+  <section class="section" id="calculate">
+    <div class="container grid">
+     <div class="text">
+      <h2 class="title">Calculadora de média</h2>
       <p class="subtitle">
         Descubra qual a sua média de notas de todas as provas!
       </p>
-      <h2 class="subtitle">
+      <h3 class="subtitle">
         Preencha o formulário com as suas notas e descupra a sua média
-      </h2>
+      </h3>
     </div>
     <!--Formulário para calcular médias-->
-    <div class="calculate" ><form action="">
+    <div class="form" >
+      <form class="form" action="">
       <input type="number" id="notaDoPrimeiroBimestre" required="required" placeholder="Primeiro Bimestre" /><br>
       <input type="number" id="notaDoSegundoBimestre" required="required" placeholder="Segundo Bimestre"/><br>
       <input type="number" id="notaDoTerceiroBimestre" required="required" placeholder="Terceiro Bimestre"/><br>
       <input type="number" id="notaDoQuartoBimestre" required="required" placeholder="Quarto Bimestre"/><br>
       <button type="button" id="calcular" onclick="calc(this)"; value="Calcular"> Calcular</button>
    
-    <h3 class="aprovado">Parabéns, você foi aprovado!</h3>
-    <h4 class="reprovado">Que pena, você não foi aprovado!</h4>
+    <h4 class="aprovado" id="aprovado">Parabéns, você foi aprovado!</h3>
+    <h5 class="reprovado" id="reprovado">Que pena, você não foi aprovado!</h4>
     </div>
+
+  </div>
   </section>
-<!--Conversor de moeda-->
-  <section class="container grid" id="conversor">      
-    <div class="container calculate">
-      <h1 class="title">Conversor de moeda</h1>
+
+  <div class="divider-1"></div>
+
+  <!-- Conversor de moeda -->
+  <section class="section" id="conversor">      
+    <div class="container grid">
+      <div class="text">
+      <h2 class="title">Conversor de moeda</h2>
       <p class="subtitle">
         Converta Dolares em Reais de maneira super simples!
       </p>
-      <h2 class="subtitle">
+      <h3 class="subtitle">
         Insira o valor em Dolares e converta.
-      </h2>
+      </h3>
     </div>
-    <!--Formulário para converter moeda-->
-    <div class="calculate" ><form action="">
+    <div class="form" >
+      <form class="form" action="">
       <input type="number" id="valor" placeholder="R$"/><br>
 
       <button type="button" class="converter" onclick="Converter()">Converter</button>
    
-    <h2 id="valorConvertido"></h2>
+    <h3 id="valorConvertido"></h3>
+    </div>
     </div>
 
   </section>
 
-  <!--Game mentalista-->
-  <section class="container grid" id="mentalist">
-    <div class="container">
-      <h1 class="title">
+  <div class="divider-2"></div>
+
+
+ <!-- Game mentalista -->
+  <section class="section" id="mentalist">
+    <div class="container grid">
+      <div class="text">
+      <h2 class="title">
         Mentalista
-      </h1>
+      </h2>
       <p class="subtitle">
         Tente adivinhar que número estou pensando, de 0 a 10.
       </p>
      </div>
-     <div>
+     <div class="form">
       <input type="number" id="valor-chute" /><br>
       <button type="button" onclick="Chutar()">Chutar</button>
       <h2 class="resultado" id="resultado"></h2>
     </div>
+    </div>
   </section>
+  
 
-  <section class="container grid" id="codeflix">
-    <div class="container">
+  <div class="divider-1"></div>
+
+
+
+  <!-- Codeflix -->
+  <section class="section" id="codeflix">
+    <div class="container grid">
+      <div class="text">
       <h1 class="title">
         Codeflix
       </h1>
     </div>
+    <div class="films" id="films">
 
-
-
+    </div>
+    </div>
   </section>
 
 
 </main>
     <script src="main.js"></script>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 
   </body>
