@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
  <!-- Ícones -->
  <link rel="stylesheet" href="assets/style.css" />
+ <link rel="icon" type="image/x-icon" href="/assets/codeforce_1-logo.svg">
 
    <!-- FONTES -->
    <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -142,6 +143,65 @@
     </div>
     </div>
   </section>
+
+  <div class="divider-2"></div>
+
+  <!--Tabela de pontos e Super Trunfo-->
+  <section class="section" id="superTrunfo">
+    <div class="container grid">
+      <div class="text">
+      <h2 class="title">
+        Super Trunfo
+      </h2>
+    </div>
+      <div class="form">
+        <p class="subtitle">
+          Sorteie a sua carta e jogue contra o computador.
+        </p>
+      <button type="button" onclick="sortearCarta()" id="btnSortear">Sortear carta</button>
+      <h2 class="subtitle">
+        Escolha seu atributo
+      </h2>
+      <button type="button" id="btnJogar" onclick="jogar()" disabled="true">Jogar</button>
+            <div class="text" id="resultado"></div> 
+
+    </div>
+    </div>
+
+
+
+
+   <div class="container grid">
+      <div class="text">
+        <h2 class="title">
+          Tabela de Classificação
+        </h2>
+        <h2 class="subtitle">
+          Calcule seus pontos automaticamente. Cada vitória vale 3 pontos. Cada empate vale 1 ponto. Derrotas não pontuam.
+        </h2>
+       </div>
+
+    <div class="tabela">
+     <table >
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Vitórias</th>
+          <th>Empates</th>
+          <th>Derrotas</th>
+          <th>Pontos</th>
+          <th colspan="3">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaJogadores">
+      </tbody>
+    </table>
+   </div>
+  </div>
+  </section>
+
+
+
 
 
 </main>
