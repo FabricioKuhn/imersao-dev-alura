@@ -76,6 +76,8 @@ body {
 .container {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
+  text-align: center;
+  place-items: center;
 }
 
 .form {
@@ -348,51 +350,21 @@ div .toggle {
 
 /*Super Trunfo*/
 
-#carta-jogador {
-  width: 360px;
-  height: 500px;
-  overflow: auto;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-end;
-}
-
-#carta-jogador h3 {
-  text-align: center;
-}
-
-.carta-imagem {
-  border: 1px solid black;
-  height: 100px;
-  margin: 10px;
-}
-
-.carta-imagem img {
-  width: 100%;
-  height: 100%;
-}
-
-.carta-status {
-  height: 160px;
-  margin: 1.5rem;
-}
-
-.carta-status input {
-  margin: 20px 10px;
-}
-
-.opcoes {
-  color: white;
-}
-
 button:disabled {
   background-color: #00ad9933;
   color: #e4e4e472;
 }
 
-/*Tabela de Classificação*/
+#opcoes {
+  color: #f1f1f1;
+  display: inline-flex;
+  align-items: center;
+  height: 3rem;
+  max-width: 350px;
+  position: relative;
+}
+
+/*Tabela de Classificação
 table {
   border: 1px solid #f1f1f1;
   border-collapse: collapse;
@@ -423,6 +395,7 @@ td button {
 td button:hover {
   color: #f1f1f1;
 }
+*/
 
 /* Responsivo */
 /*========= MEDIA QUERIES =========*/
